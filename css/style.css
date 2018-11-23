@@ -1,0 +1,112 @@
+body{
+    height: 50px;
+    font-family: Bahnschrift SemiBold;
+    text-align: center;
+    /* background-image: url("http://www.gingercreek.org/wp-content/uploads/2018/07/142443-widescreen-blue-ombre-background-1920x1080-photo.jpg");
+     */
+    background-color: black;
+    } 
+
+
+h1{
+	font-style: normal;
+	color:white;
+	font-family:Bahnschrift SemiBold;
+	padding:10px 50px 0px 0px;
+	
+}
+a{
+    color: black;
+}
+p{
+	font-style: normal;
+	font-family:Bahnschrift SemiBold;
+	
+}
+header{
+    padding: 0px;
+}
+.menu{
+    padding: 40px;
+    min-height: 80px;
+}
+.car{
+    color: black; 
+    background-color: aliceblue;
+    background-size: 100%;
+    padding: 10px;
+    
+}
+
+main p{
+    color: grey;
+}
+.car:hover{
+    background-color: azure; 
+}
+
+.promo{
+    color: black; 
+    background-color: aliceblue;
+    background-size: 100%;
+    padding: 10px;
+    
+    
+}
+.promo:hover{
+    background-color: azure; 
+}
+
+.loca{
+    color: black; 
+    background-color: aliceblue;
+    background-size: 100%;
+    padding: 10px;
+    
+}
+.loca:hover{
+    background-color: azure; 
+}
+
+.slider-area {
+    height: auto;
+    padding: 114px 0px 149px;
+}
+.slider-area {
+    display: flex;
+    align-items: center;
+    height: 800px;
+    background: #5d12f8;
+    padding-top: 80px;
+}
+
+element.style {
+    background-image: url(./img/supercar-wallpapers-lamborghini-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@-webkit-keyframes reveal { from { filter:blur(0px); } to { filter:blur(5px); }  }
+   @-moz-keyframes reveal { from { filter:blur(0px); } to { filter:blur(5px); }  }
+     @-o-keyframes reveal { from { filter:blur(0px); } to { filter:blur(5px); }  }
+        @keyframes reveal { from { filter:blur(0px); } to { filter:blur(5px); }  }
+/*.footer{
+    float:right;
+    }*/
+footer{
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    /* background-color:lavender; */
+    /* opacity: .6;  */
+    color: white;
+    font-size: 15px;
+}

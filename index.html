@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <head>
+        <title>Car Rental</title>
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+    </head>
+    <body>
+    <header>
+    </header>
+    <main>   
+            <br> 
+            <img src="./img/supercar-wallpapers-lamborghini-1.jpg" width="93%" height="400">
+            <div class="menu">
+                <table style="width:100%" border="0" height=300px>  
+                    <tr>
+                        <td class="car" width="250">
+                            <img src="./img/Mid-Size_Car_Front_View-512.png" width="50" height="50">
+                            <br>
+                            <a href="car.html"><h2>Our Car</h2></a>
+                            <p>Our web provide you various types of cars.
+                                </p>
+                    </td>    
+                        <td class="promo" width="250">
+                                <img src="./img/Shopping-Icons-Essential-Set_13-512.png" width="50" height="50">
+                                <br>
+                                <a href="promo.html"><h2>Promotion</h2></a>
+                                <p>Hottest promotions show here</p>
+                        </td>
+                        
+                        <td class="loca" width="250">
+                            <img src="./img/location-pin-280-740048.png" width="50" height="50">
+                            <br>
+                            <a href="location.html"><h2>Our Branches</h2></a>
+                            <p>Convenient locations</p>
+                    </tr>
+                </table> 
+            </div>
+</main>
+            <script>
+                    var slideIndex = 0;
+                    carousel();
+                  
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("banner");
+                        for (i = 0; i < x.length; i++) {
+                          x[i].style.display = "none"; 
+                        }
+                        slideIndex++;
+                        if (slideIndex > x.length) {slideIndex = 1} 
+                        x[slideIndex-1].style.display = "block"; 
+                        setTimeout(carousel, 4000); // Change image every 2 seconds
+                    }
+                </script>
+    <footer>
+            <p>© Car Rental ©</p>
+            <p>Address 56/1 Street</p>
+            <!-- <img src="./img/54422.jpg" width="50" height="50"><img id="twit"src="./img/54127.jpg" width="50" height="50"> -->
+    </footer>
+    </body>
+</html>
+
+            
