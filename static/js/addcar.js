@@ -69,33 +69,6 @@ $(window).load(function () {
    $("#proform").submit(submitPromo);
  
  });
-
- // Reference to the recommendations object in your Firebase database
- var location = firebase.database().ref("location");
-
- // Save a new recommendation to the database, using the input in the form
- var submitLo = function () {
- 
-   // Get input values from each of the form elements
-   var STREETNAME = $("#STREETNAME").val();
-   var PHONE = $("#PHONE").val();
-  var EMAIL = $("#EMAIL").val();
-  var img = $("#img").val();
- 
-   // Push a new recommendation to the database using those values
-   location.push({
-    "STREETNAME": STREETNAME,
-         "PHONE": PHONE,
-         "EMAIL": EMAIL,
-         "img": img
-   });
- };
- $(window).load(function () {
- 
-   // event is triggered on that element, call submitRecommendation.
-   $("#loform").submit(submitLo);
- 
-  });
   
  function changeTab(evt, tabLinkName, tabContent, tabContentName) {
   // Get all elements with class=tabContent and hide them
