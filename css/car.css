@@ -31,11 +31,7 @@ h3{
 .Box2:hover {	
     background-color: azure;
 
-}
-
-#addtable{
-    text-align: center;
-}
+  }
 
 .btn {
 
@@ -56,77 +52,3 @@ h3{
 a{
     color: white;
 }
-
-button {
-    background-color: grey; 
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-
-.buttonsub {
-    background-color: black; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-#like_button_container{
-    color: white;
-}
-
-nav li {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    text-align: center;
-    display: inline-block;
-    width: 200px;
-    background-color: #333;
-    margin: 0px;
-    transition: 0.5s;
-    margin: -1px;
-  }
-
-  nav li:hover {
-    background-color: #006BB3;
-  }
-
-  
-.tabLinks {
-    background-color: #000;
-    padding: 5px 2px 7px 2px;
-  }
-  .tabLinks li {
-    color: #FFF;
-    display: inline;
-    padding: 10px 18px;
-    cursor: pointer;
-    margin: -1px -2px;
-    font-size: 16px;
-  }
-  .tabLinks li:hover {
-    color: #000;
-    background-color: #CCC
-  }
-  .tabLinks .active {
-    background-color: #FF0000;
-    color: #FFF
-  }
-  
-  .myForm label {
-    display: block;
-    margin-bottom: 20px;
-  }
-  
-  .myForm input {
-    margin-bottom: 20px;
-  }
