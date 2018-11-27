@@ -2,7 +2,9 @@
     <head>
         <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-        <script type="text/javascript" src="./static/js/addcar.js"></script>
+        <script type="text/javascript" src="./static/js/add.js"></script>
+        
+
 
         <link rel="stylesheet" href="./css/car.css" type="text/css">
         
@@ -22,9 +24,15 @@
                     </span>
                 </header>
         <main>
+            <ul class="tabLinks">
+                <li class="tabLink1 active" onclick="changeTab(event, 'tabLink1', 'tabContent1', 'addcar')">Car</li>
+                <li class="tabLink1" onclick="changeTab(event, 'tabLink1', 'tabContent1', 'addpro')">Promotion</li>
+                <li class="tabLink1" onclick="changeTab(event, 'tabLink1', 'tabContent1', 'addlo')">Location</li>
+            </ul>
+            <div id="addcar" class="tabContent1 myForm">
             <form id="carform" class="Box">
                 <h1>Add car to Database</h1>
-                <table align="center" width="50%" id="cartable">
+                <table align="center" width="50%" id="addtable">
                 <tr>
                 <div class="form-group">
                   <td><label for="carBRAND">Car Brand : </label></td>
@@ -62,6 +70,75 @@
                 <button type="submit" class="buttonsub">Submit</button>
                 
               </form>
+            </div>
+
+            <div id='addpro' class="tabContent1 myForm" style="display:none">
+              <form id="proform" class="Box">
+                    <h1>Add Promotion to Database</h1>
+                    <table align="center" width="50%" id="addtable">
+                    <tr>
+                    <div class="form-group">
+                      <td><label for="DESCRIPTION">Description : </label></td>
+                      <td><input class="form-control" id="DESCRIPTION" placeholder="Description of promotion"></td>
+                    </div>
+                    </tr>
+            
+                    <tr>
+                      <td><label for="DISCOUNT">Discount : </label></td>
+                      <td><input class="form-control" id="DISCOUNT" placeholder="Discount"></td>
+                    </tr>
+    
+                    <tr>
+                    <div class="form-group">
+                        <td><label for="img">Image : </label></td>
+                        <td><input type="url" class="form-control" id="img" placeholder="Link of image"></td>
+                    </div>
+                    </tr>
+                    </table>
+                    <br>
+                    <button type="submit" class="buttonsub">Submit</button>
+                    
+                  </form>
+            </div>
+
+            <div id='addlo' class="tabContent1 myForm" style="display:none">
+                    <form id="loform" class="Box">
+                          <h1>Add Location to Database</h1>
+                          <table align="center" width="50%" id="addtable">
+
+                            <tr>
+                                <div class="form-group">
+                                    <td><label for="STREETNAME">Street Name : </label></td>
+                                    <td><input class="form-control" id="STREETNAME" placeholder="Name of street"></td>
+                                </div>
+                            </tr> 
+                          <tr>
+                          <div class="form-group">
+                            <td><label for="PHONE">Phone : </label></td>
+                            <td><input class="form-control" id="PHONE" placeholder="Branch's phone"></td>
+                          </div>
+                          </tr>
+                  
+                          <tr>
+                            <td><label for="EMAIL">EMAIL : </label></td>
+                            <td><input class="form-control" id="EMAIL" placeholder="Branch email"></td>
+                          </tr>
+          
+                          <tr>
+                          <div class="form-group">
+                              <td><label for="img">Image : </label></td>
+                              <td><input type="url" class="form-control" id="img" placeholder="Link of image"></td>
+                          </div>
+
+
+                          </tr>
+                          </table>
+                          <br>
+                          <button type="submit" class="buttonsub">Submit</button>
+                          
+                        </form>
+                  </div>
+
         </main>
         <footer>
         <br>
