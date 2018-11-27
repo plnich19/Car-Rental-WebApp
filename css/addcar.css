@@ -1,0 +1,131 @@
+body{
+    padding: 40px;
+    min-height: 80px;
+    height: 50px;
+    font-family: Bahnschrift SemiBold;
+    text-align: center;
+    /* background-image: url("http://www.gingercreek.org/wp-content/uploads/2018/07/142443-widescreen-blue-ombre-background-1920x1080-photo.jpg");
+     */
+    background-color: black;
+    } 
+.Box{
+        padding: 40px;
+        background-color: aliceblue;
+        text-align: center;
+        align-content: center;
+    }
+.Box2{
+    padding: 40px;
+    background-color: aliceblue;
+    text-align: center;
+    align-content: center;
+}
+h2{
+    color: white;
+    text-align: left;
+}
+h3{
+    color: white;
+    text-align: left;
+}
+.Box2:hover {	
+    background-color: azure;
+
+}
+
+#addtable{
+    text-align: center;
+}
+
+.btn {
+
+    background-color: black;
+    border: none;
+    color: white;
+    border-style: groove;
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 10px;
+    transition: 0.7s;
+  }
+
+  .btn:hover {	
+    background-color: #006bb3;
+    color: white;
+  }
+a{
+    color: white;
+}
+
+button {
+    background-color: grey; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonsub {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#like_button_container{
+    color: white;
+}
+
+nav li {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    background-color: #333;
+    margin: 0px;
+    transition: 0.5s;
+    margin: -1px;
+  }
+
+  nav li:hover {
+    background-color: #006BB3;
+  }
+
+  
+.tabLinks {
+    background-color: #000;
+    padding: 5px 2px 7px 2px;
+  }
+  .tabLinks li {
+    color: #FFF;
+    display: inline;
+    padding: 10px 18px;
+    cursor: pointer;
+    margin: -1px -2px;
+    font-size: 16px;
+  }
+  .tabLinks li:hover {
+    color: #000;
+    background-color: #CCC
+  }
+  .tabLinks .active {
+    background-color: #FF0000;
+    color: #FFF
+  }
+  
+  .myForm label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .myForm input {
+    margin-bottom: 20px;
+  }
