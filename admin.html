@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <link rel="stylesheet" href="./css/car.css" type="text/css">
+        
+    </head>
+    <body>
+            <header>
+                    <span class="menu">
+                        <table  align="center" height="100"> 
+                            <tr>
+                            <td class="btn" width="400px" id="main"><a href="index.html">Main</td>
+                                <td class="btn" width="400px" id="car"><a href="car.html">Our Car</td>
+                                    <td class="btn" width="400px" id="pro"><a href="promo.html">Promotion</td>
+                                    <td class="btn" width="400px" id="brm"><a href="location.html">Our Branches</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </header>
+        <main>
+            <div class="Box3">
+            <h1>ADMIN PAGE</h2>
+            <p><a href="add.html">Add Car</p>
+            <p><a href="update.html">Update Car Information</p>
+            <p><a href="delete.html">Delete Car</p>
+            </div>
+        </main>
+        <footer>
+        <br>
+        <div id="like_button_container"></div>
+        </footer>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+        <script src="like_button.js"></script>
+    </body>
+</html>
