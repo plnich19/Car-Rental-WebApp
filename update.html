@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <!-- <script type="text/javascript" src="./static/js/update.js"></script> -->
+        
+
+
+        <link rel="stylesheet" href="./css/car.css" type="text/css">
+        
+    </head>
+    <body>
+            <header>
+                    <span class="menu">
+                        <table  align="center" height="100"> 
+                            <tr>
+                            <td class="btn" width="400px" id="main"><a href="index.html">Main</td>
+                                <td class="btn" width="400px" id="car"><a href="car.html">Our Car</td>
+                                    <td class="btn" width="400px" id="pro"><a href="promo.html">Promotion</td>
+                                    <td class="btn" width="400px" id="brm"><a href="location.html">Our Branches</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </span>
+                </header>
+        <main>
+            <!-- <ul class="tabLinks">
+                <li class="tabLink1 active" onclick="changeTab(event, 'tabLink1', 'tabContent1', 'upcar')">Update</li>
+                <li class="tabLink1" onclick="changeTab(event, 'tabLink1', 'tabContent1', 'delcar')">Delete</li>
+        
+            </ul> -->
+            <!-- <div id="addcar" class="tabContent1 myForm"> -->
+            <form id="carform" class="Box">
+                <h1>Update car</h1>
+                <table align="center" width="50%" id="addtable">
+
+                <tr>
+                    <div class="form-group">
+                        <td><label for="ID">ID : </label></td>
+                        <td><input class="form-control" id="ID" placeholder="ID"></td>
+                    </div>
+                </tr>  
+                <tr>
+                <div class="form-group">
+                  <td><label for="carBRAND">Car Brand : </label></td>
+                  <td><input class="form-control" id="carBRAND" placeholder="Car brand"></td>
+                </div>
+                </tr>
+        
+                <tr>
+                  <td><label for="carNAME">Car Name (Model) : </label></td>
+                  <td><input class="form-control" id="carNAME" placeholder="Model name of car"></td>
+                </tr>
+        
+                <tr>
+                <div class="form-group">
+                  <td><label for="carPRICE">Car Price : </label></td>
+                  <td><input type="form-control" id="carPRICE" placeholder="Price"></td>
+                </div>
+                </tr>
+
+                <tr>
+                <div class="form-group">
+                    <td><label for="carTYPE">Car Type : </label></td>
+                    <td><input type="form-control" class="form-control" id="carTYPE" placeholder="Car type"></td>
+                </div>
+                </tr>
+
+                <tr>
+                <div class="form-group">
+                    <td><label for="img">Image : </label></td>
+                    <td><input type="url" class="form-control" id="img" placeholder="Link of image"></td>
+                </div>
+                </tr>
+                </table>
+                <br>
+                <button id="btnUpdate" type="button" class="buttonsub">Submit</button>
+                
+              </form>
+            <!-- </div> -->
+
+            <!-- <div id="delcar" class="tabContent1 myForm" style="display:none"> -->
+                    <form id="carform" class="Box">
+                        <h1>Delete car</h1>
+                        <table align="center" width="50%" id="addtable">
+        
+                        <tr>
+                            <div class="form-group">
+                                <td><label for="ID">ID : </label></td>
+                                <td><input class="form-control" id="ID" placeholder="ID"></td>
+                            </div>
+                        </tr>  
+                        </table>
+                        <br>
+                        <button id="btnDelete" type="button" class="buttonsub">Submit</button>
+                        
+                      </form>
+                    <!-- </div> -->
+
+            
+            <script>
+            const config = {
+                apiKey: "AIzaSyAFKdrpw1A3rndo-q-iCor-6BMcW15MmCo",
+                authDomain: "carryrental.firebaseapp.com",
+                databaseURL: "https://carryrental.firebaseio.com",
+                projectId: "carryrental",
+                storageBucket: "carryrental.appspot.com",
+                messagingSenderId: "44637103764"
+            };
+            firebase.initializeApp(config);
+    
+        function updateData(userId, carBRAND, carNAME, carPRICE, carTYPE, img){ 
+
+        // A post entry.
+        var postData = {
+            carBRAND: carBRAND,
+            carNAME: carNAME,
+            carPRICE: carPRICE,
+            carTYPE: carTYPE,
+            img: img,
+        };
+        var personRef = firebase.database().ref().child("car").child(userId);
+
+        personRef.once('value', function (snapshot) {
+
+            if (snapshot.val() === null) {
+                /* does not exist */
+                alert('does not exist');
+            } else {
+                personRef.update(postData);
+            }
+
+        });
+    }
+
+    function deleteData(userId) {
+        var personRef = firebase.database().ref().child("car").child(userId);
+            personRef.once('value', function (snapshot) {
+
+                if (snapshot.val() === null) {
+                    /* does not exist */
+                    alert('does not exist');
+                } else {
+                    personRef.remove();
+                }
+
+            });
+        }
+
+
+          $('#btnUpdate').on('click', function () {
+                var ID = $('#ID').val();
+               var carBRAND = $("#carBRAND").val();
+                var carNAME = $("#carNAME").val();
+                var carPRICE = $("#carPRICE").val();
+                var carTYPE = $("#carTYPE").val();
+                var img = $("#img").val();
+                document.getElementById("ID").value = "";
+                document.getElementById("carBRAND").value = "";
+                document.getElementById("carNAME").value = "";
+                document.getElementById("carPRICE").value = "";
+                document.getElementById("carTYPE").value = "";
+                document.getElementById("img").value = "";
+                updateData(ID, carBRAND, carNAME, carPRICE, carTYPE, img);
+            });
+
+         $('#btnDelete').on('click', function () {
+            var ID = $('#ID').val();
+            deleteData(ID);
+        });
+    
+            </script>
+        </main>
+        <footer>
+        <br>
+        <div id="like_button_container"></div>
+        </footer>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <script src="like_button.js"></script>
+    </body>
+</html>
