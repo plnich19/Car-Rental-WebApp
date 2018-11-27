@@ -41,7 +41,76 @@ var submitCar = function () {
 // will run when the submit button is clicked.
 $(window).load(function () {
 
-  // event is triggered on that element, call submitRecommendation.
   $("#carform").submit(submitCar);
 
 });
+
+ // Reference to the recommendations object in your Firebase database
+ var promotion = firebase.database().ref("promotion");
+
+ // Save a new recommendation to the database, using the input in the form
+ var submitPromo = function () {
+ 
+   // Get input values from each of the form elements
+   var DESCRIPTION = $("#DESCRIPTION").val();
+   var DISCOUNT = $("#DISCOUNT").val();
+   var img = $("#img").val();
+ 
+   // Push a new recommendation to the database using those values
+   promotion.push({
+     "DESCRIPTION": DESCRIPTION,
+     "DISCOUNT": DISCOUNT,
+     "img": img
+   });
+ };
+ $(window).load(function () {
+ 
+   // event is triggered on that element, call submitRecommendation.
+   $("#proform").submit(submitPromo);
+ 
+ });
+
+ // Reference to the recommendations object in your Firebase database
+ var location = firebase.database().ref("location");
+
+ // Save a new recommendation to the database, using the input in the form
+ var submitLo = function () {
+ 
+   // Get input values from each of the form elements
+   var STREETNAME = $("#STREETNAME").val();
+   var PHONE = $("#PHONE").val();
+  var EMAIL = $("#EMAIL").val();
+  var img = $("#img").val();
+ 
+   // Push a new recommendation to the database using those values
+   location.push({
+    "STREETNAME": STREETNAME,
+         "PHONE": PHONE,
+         "EMAIL": EMAIL,
+         "img": img
+   });
+ };
+ $(window).load(function () {
+ 
+   // event is triggered on that element, call submitRecommendation.
+   $("#loform").submit(submitLo);
+ 
+  });
+  
+ function changeTab(evt, tabLinkName, tabContent, tabContentName) {
+  // Get all elements with class=tabContent and hide them
+  var tabContent = document.getElementsByClassName(tabContent);
+  for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+  }
+
+  // Get all elements with class=tab and remove the class "active"
+  var tab = document.getElementsByClassName(tabLinkName);
+  for (i = 0; i < tab.length; i++) {
+      tab[i].className = tab[i].className.replace("active", "");
+  }
+
+  // Show the current tab content, and add an "active" class to the button that opened the tab
+  document.getElementById(tabContentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
