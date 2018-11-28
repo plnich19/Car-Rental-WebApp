@@ -6,7 +6,7 @@ class Hello extends React.Component {
   }
 
   render() {
-      return 'Hello! This is an admin page';
+      return 'You can add, update and delete car information.';
   }
 }
 
